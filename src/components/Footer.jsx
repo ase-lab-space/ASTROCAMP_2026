@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
 
         <div style={{ marginBottom: '2rem' }}>
-          <h4 style={{ fontFamily: 'sans-serif', fontSize: '1rem', marginBottom: '1rem', color: '#ccc' }}>アストロキャンプ各種ポリシー</h4>
+          <h4 style={{ fontFamily: 'sans-serif', fontSize: '1rem', marginBottom: '1rem', color: '#ccc' }}>Policy</h4>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
             <li><a href="#" style={{ fontSize: '0.9rem', color: '#888' }}>利用規約</a></li>
             <li><a href="#" style={{ fontSize: '0.9rem', color: '#888' }}>プライバシーポリシー</a></li>

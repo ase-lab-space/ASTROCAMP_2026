@@ -3,6 +3,7 @@ import ASELabIcon from '../assets/aselab_logo_dark.png'
 import HomeIcon from '@mui/icons-material/Home';
 import EventIcon from '@mui/icons-material/Event';
 import HistoryIcon from '@mui/icons-material/History';
+import { NewspaperIcon } from 'lucide-react';
 import SendIcon from '@mui/icons-material/Send';
 
 const Header = () => {
@@ -13,8 +14,8 @@ const Header = () => {
       <nav className="nav">
         <ul>
           <li><a href="#home"><HomeIcon fontSize="large"  /> Home</a></li>
-          <li><a href="#activities"> <EventIcon fontSize='large'/> Activities</a></li>
-          <li><a href="#past"><HistoryIcon fontSize='large'/> History</a></li>
+          <li><a href="#activities"> <EventIcon fontSize='large'/> Contents</a></li>
+          <li><a href="#news"><NewspaperIcon size={24} /> News</a></li>
           <li><a href="#apply" style={{ color: 'var(--color-accent)' }}><SendIcon fontSize='large' />Apply</a></li>
         </ul>
       </nav>
