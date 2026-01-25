@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
 /* src/App.css */
 
 :root {
-  --color-primary: #0b0d17; /* 深い宇宙の色 */
+  --color-primary: #0b0d17;
+  /* 深い宇宙の色 */
   --color-text: #e0e6ed;
   --color-accent: #ff8616;
-  --color-accent-sub: #bc13fe; /* ネオンパープル */
+  --color-accent-sub: #bc13fe;
+  /* ネオンパープル */
   --font-heading: url('assets/fonts/BebasNeue-Regular.ttf'), sans-serif;
-  --font-body: 'Exo 2', sans-serif;
+  --font-body: 'Noto Sans JP', sans-serif;
 }
 
 * {
@@ -27,7 +31,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   z-index: -1;
   background-size: cover;
@@ -45,7 +49,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(11, 13, 23, 0.7); /* 黒っぽい青の透過 */
+  background: rgba(11, 13, 23, 0.7);
+  /* 黒っぽい青の透過 */
 }
 
 /* --- ヘッダー --- */
@@ -60,10 +65,12 @@ body {
   z-index: 100;
   font-family: 'ASTRO-CAMP';
   background: rgba(11, 13, 23, 0.3);
-  backdrop-filter: blur(10px); /* すりガラス効果 */
+  backdrop-filter: blur(10px);
+  /* すりガラス効果 */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-.header img{
+
+.header img {
   height: 5rem;
   width: auto;
 }
@@ -117,10 +124,11 @@ body {
   align-items: center;
 }
 
-.hero img{
+.hero img {
   margin-top: 2rem;
   margin-bottom: 0rem;
-  display: block; /* remove inline baseline gap under the image */
+  display: block;
+  /* remove inline baseline gap under the image */
   height: 25rem;
   width: auto;
 }
@@ -161,7 +169,7 @@ body {
 
 .section-title {
   text-align: center;
-  font-family: url('assets/fonts/BebasNeue-Regular.ttf'),sans-serif;
+  font-family: url('assets/fonts/BebasNeue-Regular.ttf'), sans-serif;
   font-size: 2.5rem;
   margin-bottom: 5rem;
   color: #fff;
@@ -175,7 +183,8 @@ body {
   justify-content: space-between;
   gap: 4rem;
   margin-bottom: 10rem;
-  opacity: 0; /* 初期状態は非表示（GSAPで表示） */
+  opacity: 0;
+  /* 初期状態は非表示（GSAPで表示） */
   width: 100%;
   max-width: 1000px;
 }
@@ -250,15 +259,15 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-.footer h{
-  font-family: url('assets/fonts/BebasNeue-Regular.ttf'),sans-serif;
+.footer h {
+  font-family: url('assets/fonts/BebasNeue-Regular.ttf'), sans-serif;
 }
 
 .footer p {
   margin-bottom: 1rem;
   color: #888;
-  
-  font-family: url('assets/fonts/BebasNeue-Regular.ttf'),sans-serif;
+
+  font-family: url('assets/fonts/BebasNeue-Regular.ttf'), sans-serif;
 }
 
 /* --- スマホ対応 --- */
@@ -281,13 +290,13 @@ body {
 
 /* フォントの設定 */
 @font-face {
-  font-family:'ASTRO-CAMP';
+  font-family: 'ASTRO-CAMP';
   src: url('assets/fonts/BebasNeue-Regular.ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
-.font-custom{
+.font-custom {
   font-family: 'ASTRO-CAMP', sans-serif;
 }

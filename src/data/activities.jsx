@@ -1,20 +1,25 @@
+import poster2025 from '../assets/poster2025.png';
+import studying from '../assets/studying.JPG';
+import hujitasan from '../assets/hujitasan.JPG';
+import group from '../assets/group.JPG';
+
 export const activitiesData = [
   {
     id: 1,
     title: "アストロキャンプとは",
     description: "私たち大学生にとって、「宇宙を仕事に」というのはとても身近になりつつあります。宇宙産業の拡大によって航空宇宙エンジニアだけでなく、宇宙を使ったサービスやビジネスの創出・拡大など幅広い関わり方が現実的になってきたためです。アストロキャンプは企業や専門家の協力を得ながら、そんな宇宙産業を担う専門人材の育成や、産業横断型の宇宙利用が可能な人材の育成を行います。",
-    image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1000&auto=format&fit=crop"
+    image: studying
   },
   {
     id: 2,
     title: "～学ぶ～\n 企業協力による\n実践的カリキュラム",
     description: "それぞれのゼミは、実際に宇宙開発をリードする宇宙スタートアップや機関でのインターンやプロジェクト経験を持つ学生が主導しており、それらの企業からバックアップを受けることで、実践的で専門的なカリキュラムとなっています。また、学生と企業の間での採用・インターンを目的とした交流イベントも企画しています。",
-    image: "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=1000&auto=format&fit=crop"
+    image: hujitasan
   },
   {
     id: 3,
     title: "～出会う～\n 将来を変えるような体験を",
     description: "アストロキャンプに参加する学生の多くが、宇宙分野かどうかに関わらず、何かしらに対する強い情熱やエネルギーを持っています。航空宇宙工学だけでなく、その他の学問やビジネス・研究に対する思いなどを持つ学生たちとの交流は、キャンプ期間中の5日間に限らない、一生の出会いになるでしょう。",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop"
+    image: group
   }
 ];

@@ -1,30 +1,58 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
+  /* Wider to show peeking slides */
   margin: 40px auto;
   overflow: hidden;
-  border-radius: 12px;
-  background-color: #333;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  /* Hide the overflow beyond container */
+  /* border-radius: 12px; */
+  /* Removed container border radius to let slides bleed if wanted */
+  /* background-color: #333; */
+  /* box-shadow: 0 4px 12px rgba(0,0,0,0.1); */
+}
+
+/* Wrapper to establish context for the track */
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  /* Space for shadow/scale */
 }
 
 .carousel-track {
   display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  transition: transform 0.5s ease-out;
+  /* Smooth sliding */
+  width: 100%;
+  /* Will depend on number of slides if not infinite ... but for flex translate logic */
+  /* We act as if track is very wide */
 }
-.carousel-track::-webkit-scrollbar { display: none; }
 
 .carousel-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
+  flex: 0 0 60%;
+  /* Show 60% of the container width */
+  margin: 0 10px;
+  /* Gap */
   height: 400px;
   position: relative;
   cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0.5;
+  /* Inactive slides are faded */
+  transform: scale(0.9);
+  /* Inactive slides are smaller */
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 8px 20px rgba(0, 243, 255, 0.2);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  z-index: 5;
 }
 
 .carousel-image {
@@ -33,9 +61,10 @@
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-/* ホバー時に画像を少しズーム */
+
 .carousel-slide:hover .carousel-image {
   transform: scale(1.05);
+  /* Slight zoom on hover */
 }
 
 /* テキストオーバーレイ */
@@ -45,16 +74,24 @@
   left: 0;
   width: 100%;
   padding: 60px 20px 30px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   color: white;
-  pointer-events: none; /* テキスト上のクリックを親要素に通す */
+  pointer-events: none;
+  opacity: 0;
+  /* Hide text on inactive slides by default */
+  transition: opacity 0.3s;
+}
+
+.carousel-slide.active .slide-content {
+  opacity: 1;
 }
 
 .slide-title {
   margin: 0 0 8px;
   font-size: 1.5rem;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--color-accent, #ff8616);
 }
 
 .slide-desc {
@@ -69,44 +106,60 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   backdrop-filter: blur(4px);
-  /* transition: background 0.2s; */
+  transition: background 0.2s, transform 0.2s;
 }
-.nav-button:hover { background: rgba(255, 255, 255, 0.5); }
-.nav-prev { left: 10px; }
-.nav-next { right: 10px; }
+
+.nav-button:hover {
+  background: var(--color-accent, #ff8616);
+  border-color: var(--color-accent, #ff8616);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-prev {
+  left: 20px;
+}
+
+.nav-next {
+  right: 20px;
+}
 
 /* インジケーター */
 .indicators {
   position: absolute;
-  bottom: 15px;
-  right: 20px;
+  bottom: 0px;
+  /* Adjust as needed */
+  right: 0;
+  left: 0;
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 12px;
   z-index: 10;
-  margin: auto;
+  padding-bottom: 10px;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   border: none;
   padding: 0;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
+
 .dot.active {
-  background: white;
+  background: var(--color-accent, #ff8616);
   transform: scale(1.3);
+  box-shadow: 0 0 10px var(--color-accent, #ff8616);
 }

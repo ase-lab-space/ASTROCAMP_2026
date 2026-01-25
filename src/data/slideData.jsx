@@ -9,20 +9,20 @@ export const slideData = [
     image: SatteliteDevImage, // 画像ファイル名を適宜変更
     title: "衛星開発ゼミ（宇宙機開発分野）",
     description: "衛星開発で使用される主要な技術スタックとその応用例を紹介。",
-    link: "/article/space-dev"
+    link: "/satellite-dev"
   },
   {
     id: 2,
     image: DataAnalysisImage, // 画像ファイル名を適宜変更
     title: "衛星データ解析ゼミ",
     description: "衛星データ解析で使用される主要な技術スタックとその応用例を紹介。",
-    link: "/article/web-dev"
-      },
+    link: "/satellite-data"
+  },
   {
     id: 3,
     image: JigyouAnalysisImage, // 画像ファイル名を適宜変更
     title: "宇宙事業分析ゼミ",
     description: "宇宙事業分析で使用される主要な技術スタックとその応用例を紹介。",
-    link: "/article/embedded"
+    link: "/space-business"
   }
 ];
