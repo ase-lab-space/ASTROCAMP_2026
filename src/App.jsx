@@ -18,8 +18,8 @@ function App() {
     <>
       <div className="app">
         {/* 固定背景（従来）またはスクロール背景のどちらかを選択 */}
-        {/* <Background /> */}
-        <ScrollBackground />
+        <Background />
+        {/* <ScrollBackground /> */}
         <Header />
         <Hero />
         <Activities />
