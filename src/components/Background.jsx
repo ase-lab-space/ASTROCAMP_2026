@@ -4,11 +4,17 @@ import cosmicImg01 from '../assets/spacex_img.jpg';
 
 const Background = () => {
   return (
-    <div 
-      className="background-container"
-      style={{ backgroundImage: `url(${cosmicImg01})` }}
-    >
-      <div className="background-overlay"></div>
+    <div className="background-wrapper">
+      {/* Blurred background filling the screen */}
+      <div
+        className="background-blur-layer"
+        style={{ backgroundImage: `url(${cosmicImg01})` }}
+      />
+      {/* Main image centered */}
+      <div
+        className="background-main-layer"
+        style={{ backgroundImage: `url(${cosmicImg01})` }}
+      />
     </div>
   );
 };

@@ -27,30 +27,44 @@ body {
 }
 
 /* --- 背景画像 (全画面固定) --- */
-.background-container {
+/* --- 背景画像 (全画面固定) --- */
+.background-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background-size: auto 100vh;
-  background-position: left top;
-  background-repeat: no-repeat;
-
-  /* 画像がロードされる前やエラー時に表示する色としてここに設定する */
   background-color: var(--color-primary);
+  /* フォールバック色 */
+  overflow: hidden;
 }
 
-/* 背景を少し暗くして文字を読みやすくするオーバーレイ */
-.background-overlay {
+.background-blur-layer {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(11, 13, 23, 0) 10%, rgba(11, 13, 23, 1) 90%);
-  /* 左側は画像を見せ、右に行くほど暗くする */
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.6);
+  /* ぼかしと少し暗くして文字を見やすく */
+  transform: scale(1.1);
+  /* ぼかしの端が切れないように少し拡大 */
+}
+
+.background-main-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100vh;
+  /* 縦幅に合わせて比率維持 */
+  background-position: center top;
+  /* 上下の位置はそのまま(top)、左右は中央(center) */
+  background-repeat: no-repeat;
 }
 
 /* --- ヘッダー --- */
