@@ -34,8 +34,8 @@ body {
   width: 100%;
   height: 100vh;
   z-index: -1;
-  background-size: cover;
-  background-position: center;
+  background-size: auto 100vh;
+  background-position: left top;
   background-repeat: no-repeat;
 
   /* 画像がロードされる前やエラー時に表示する色としてここに設定する */
@@ -49,8 +49,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(11, 13, 23, 0.7);
-  /* 黒っぽい青の透過 */
+  background: linear-gradient(to right, rgba(11, 13, 23, 0) 10%, rgba(11, 13, 23, 1) 90%);
+  /* 左側は画像を見せ、右に行くほど暗くする */
 }
 
 /* --- ヘッダー --- */
