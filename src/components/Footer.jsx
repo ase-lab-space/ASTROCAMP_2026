@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -17,9 +18,9 @@ const Footer = () => {
         <div style={{ marginBottom: '2rem' }}>
           <h4 style={{ fontFamily: 'sans-serif', fontSize: '1rem', marginBottom: '1rem', color: '#ccc' }}>Policy</h4>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-            <li><a href="#" style={{ fontSize: '0.9rem', color: '#888' }}>利用規約</a></li>
-            <li><a href="#" style={{ fontSize: '0.9rem', color: '#888' }}>プライバシーポリシー</a></li>
-            <li><a href="#" style={{ fontSize: '0.9rem', color: '#888' }}>キャンセルポリシー</a></li>
+            <li><Link to="/terms" style={{ fontSize: '0.9rem', color: '#888' }}>利用規約</Link></li>
+            <li><Link to="/privacy" style={{ fontSize: '0.9rem', color: '#888' }}>プライバシーポリシー</Link></li>
+            <li><Link to="/cancellation" style={{ fontSize: '0.9rem', color: '#888' }}>キャンセルポリシー</Link></li>
           </ul>
         </div>
 

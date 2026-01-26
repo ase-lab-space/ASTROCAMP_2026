@@ -66,6 +66,16 @@
     margin-bottom: 1.5rem;
 }
 
+.seminar-body h1,
+.seminar-body h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
 .seminar-body h3 {
     font-size: 1.5rem;
     margin-top: 2rem;

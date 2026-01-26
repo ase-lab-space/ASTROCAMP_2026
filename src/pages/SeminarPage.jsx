@@ -29,7 +29,7 @@ const SeminarPage = ({ data }) => {
                 <div className="seminar-content">
                     {data.sections.map((section, index) => (
                         <section key={index} className="seminar-section">
-                            <h2 className="seminar-heading">{section.heading}</h2>
+                            {section.heading && <h2 className="seminar-heading">{section.heading}</h2>}
                             <div className="seminar-body">
                                 <Markdown remarkPlugins={[remarkGfm]}>{section.body}</Markdown>
                             </div>

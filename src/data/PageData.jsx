@@ -1,3 +1,6 @@
+import termsMd from './terms.md?raw';
+import privacyMd from './privacy.md?raw';
+import cancellationMd from './cancellation.md?raw';
 
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
@@ -155,6 +158,39 @@ export const spaceBusinessData = {
         {
             heading: "概要",
             body: "準備中..."
+        }
+    ]
+};
+
+export const termsData = {
+    title: "利用規約",
+    image: "",
+    sections: [
+        {
+            heading: "",
+            body: termsMd
+        }
+    ]
+};
+
+export const privacyData = {
+    title: "プライバシーポリシー",
+    image: "",
+    sections: [
+        {
+            heading: "",
+            body: privacyMd
+        }
+    ]
+};
+
+export const cancellationData = {
+    title: "キャンセルポリシー",
+    image: "",
+    sections: [
+        {
+            heading: "",
+            body: cancellationMd
         }
     ]
 };
