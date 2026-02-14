@@ -27,6 +27,9 @@ dist-ssr
 *.png
 *.jpg
 *.svg
+*.pdf
+*.jpeg
+*.webp
 
 assets/*
 !assets/.gitkeep
