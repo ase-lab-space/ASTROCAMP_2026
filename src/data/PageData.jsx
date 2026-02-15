@@ -1,7 +1,8 @@
+import hujitasanImg from '../assets/hujitasan.JPG';
 
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
-    image: "src/assets/hujitasan.jpg", // 仮の画像パス
+    image: hujitasanImg,
     sections: [
         {
             heading: "ゼミの意義・目的",

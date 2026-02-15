@@ -23,15 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# .gitignore
-*.png
-*.jpg
-*.svg
-*.pdf
-*.jpeg
-*.webp
 
-assets/*
-!assets/.gitkeep
 
 .vercel
