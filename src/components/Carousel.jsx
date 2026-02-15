@@ -31,7 +31,7 @@ const Carousel = () => {
         <div
           className="carousel-track"
           style={{
-            transform: `translateX(calc(-${currentIndex * 60}% + 20%))` // 60% width, centered (50% - 30% = 20% offset)
+            transform: `translateX(calc(-${currentIndex * 80}% + 10%))` // 80% width, centered (50% - 40% = 10% offset)
           }}
         >
           {slideData.map((item, index) => (

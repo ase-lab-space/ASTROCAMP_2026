@@ -1,0 +1,197 @@
+/* ===== Sponsors Section ===== */
+/* 参考: とよはし☆ロボコンズ風 — 白背景・ティア別グリッド配置 */
+
+.sponsors-section {
+    position: relative;
+    z-index: 1;
+    padding: 60px 20px;
+}
+
+.sponsors-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    /* 白背景（ロゴ利用規約対応） */
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 50px 60px 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Title */
+.sponsors-heading {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sponsors-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== Tier Groups ===== */
+.sponsors-tier {
+    margin-bottom: 2.5rem;
+}
+
+.sponsors-tier:last-child {
+    margin-bottom: 0;
+}
+
+/* Tier Label — 横線付き中央テキスト */
+.sponsors-tier-label {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sponsors-tier-label::before,
+.sponsors-tier-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+/* ===== Logo Grid — ティアで行数・サイズを調整 ===== */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Platinum: ロゴ大きめ、余白広め (1行に2〜3個) */
+.sponsors-tier[data-tier="platinum"] .sponsors-grid {
+    gap: 50px 60px;
+}
+
+/* Gold: 中サイズ (1行に3〜4個) */
+.sponsors-tier[data-tier="gold"] .sponsors-grid {
+    gap: 36px 48px;
+}
+
+/* Silver: 小サイズ (1行に4〜5個) */
+.sponsors-tier[data-tier="silver"] .sponsors-grid {
+    gap: 28px 36px;
+}
+
+/* Bronze: 最小 (1行に5〜6個) */
+.sponsors-tier[data-tier="bronze"] .sponsors-grid {
+    gap: 20px 28px;
+}
+
+/* ===== Logo Item ===== */
+.sponsor-logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.sponsor-logo-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* ----- Tier-based logo sizing ----- */
+.sponsor-logo-link[data-tier="platinum"] .sponsor-logo {
+    max-height: 90px;
+    max-width: 300px;
+}
+
+.sponsor-logo-link[data-tier="gold"] .sponsor-logo {
+    max-height: 65px;
+    max-width: 220px;
+}
+
+.sponsor-logo-link[data-tier="silver"] .sponsor-logo {
+    max-height: 50px;
+    max-width: 170px;
+}
+
+.sponsor-logo-link[data-tier="bronze"] .sponsor-logo {
+    max-height: 38px;
+    max-width: 140px;
+}
+
+.sponsor-logo {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Placeholder for missing logos */
+.sponsor-logo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    color: #999;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px 24px;
+    min-width: 160px;
+    min-height: 60px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .sponsors-container {
+        padding: 35px 20px 30px;
+    }
+
+    .sponsors-heading {
+        font-size: 2rem;
+    }
+
+    .sponsors-tier[data-tier="platinum"] .sponsors-grid {
+        gap: 30px 40px;
+    }
+
+    .sponsors-tier[data-tier="gold"] .sponsors-grid,
+    .sponsors-tier[data-tier="silver"] .sponsors-grid,
+    .sponsors-tier[data-tier="bronze"] .sponsors-grid {
+        gap: 24px 28px;
+    }
+
+    .sponsor-logo-link[data-tier="platinum"] .sponsor-logo {
+        max-height: 60px;
+        max-width: 200px;
+    }
+
+    .sponsor-logo-link[data-tier="gold"] .sponsor-logo {
+        max-height: 48px;
+        max-width: 160px;
+    }
+
+    .sponsor-logo-link[data-tier="silver"] .sponsor-logo {
+        max-height: 36px;
+        max-width: 130px;
+    }
+
+    .sponsor-logo-link[data-tier="bronze"] .sponsor-logo {
+        max-height: 28px;
+        max-width: 100px;
+    }
+}

@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Activities from '../components/Activities';
 import News from '../components/News';
+import Sponsors from '../components/Sponsors';
 import Footer from '../components/Footer';
 import Carousel from '../components/Carousel';
 import FloatingButton from '../components/FloatingButton';
@@ -23,6 +24,7 @@ const Top = () => {
                 <Carousel />
             </section>
             <News />
+            <Sponsors />
             <footer id="footer">
                 <Footer />
             </footer>
