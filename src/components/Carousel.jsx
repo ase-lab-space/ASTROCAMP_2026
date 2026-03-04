@@ -4,11 +4,21 @@ import './Carousel.css';
 import { slideData } from '../data/slideData';
 import ImageWithLoader from './ImageWithLoader';
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return isMobile;
+};
+
 const Carousel = () => {
   const trackRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(1); // Start from the second item (index 1) to show "peek" effect properly if looping, or just 0. Let's stick to 0 but center it.
-  // Actually simpler to just track index and translate
+  const [currentIndex, setCurrentIndex] = useState(1);
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const handleLinkClick = (url) => {
     if (url) {
@@ -32,7 +42,9 @@ const Carousel = () => {
         <div
           className="carousel-track"
           style={{
-            transform: `translateX(calc(-${currentIndex * 60}% + 20%))` // 60% width, centered (50% - 30% = 20% offset)
+            transform: isMobile
+              ? `translateX(calc(-${currentIndex * 85}% + 7.5%))`
+              : `translateX(calc(-${currentIndex * 60}% + 20%))`
           }}
         >
           {slideData.map((item, index) => (

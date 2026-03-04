@@ -172,32 +172,29 @@
 @media (max-width: 768px) {
   .carousel-slide {
     flex: 0 0 85%;
-    /* Make slides wider on mobile */
-    height: 300px;
+    height: 250px;
+    margin: 0 4px;
   }
 
-  .carousel-track {
-    /* Adjust translate calculation in JS or here if using pure CSS, but since we use JS inline style, 
-       we might need to tweak the logic there too if we change the flex basis significantly without matching JS offset.
-       
-       However, the inline style uses `translateX(calc(-${currentIndex * 60}% + 20%))` which assumes 60% width.
-       If we change flex-basis to 85% here, we should probably update the JS or stick to a layout that works.
-       
-       Actually, if we want to change width on mobile, we need JS to know about it or use a CSS variable.
-       Let's use a CSS variable for slide width percentage.
-    */
-    --slide-width: 85%;
-    --slide-offset: 7.5%;
-    /* (100 - 85) / 2 */
+  .slide-title {
+    font-size: 1.1rem;
   }
 
-  /* We need to update the JS to use these variables if possible, OR just stick to a responsive design that doesn't rely on hardcoded JS percentages for centering.
-     
-     The JS logic `transform: translateX(calc(-${currentIndex * 60}% + 20%))` is hardcoded.
-     I should update JS to use CSS variables or a media query hook. 
-     For now, let's keep it simple and maybe NOT change the width dramatically if it breaks the JS centering logic,
-     OR update JS to be responsive.
-     
-     Let's update JS in the next step to be responsive.
-  */
+  .slide-desc {
+    font-size: 0.8rem;
+  }
+
+  .nav-button {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .nav-prev {
+    left: 8px;
+  }
+
+  .nav-next {
+    right: 8px;
+  }
 }
