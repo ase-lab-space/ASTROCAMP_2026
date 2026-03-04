@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Carousel.css';
 import { slideData } from '../data/slideData';
+import ImageWithLoader from './ImageWithLoader';
 
 const Carousel = () => {
   const trackRef = useRef(null);
@@ -40,7 +41,7 @@ const Carousel = () => {
               className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
               onClick={() => handleLinkClick(item.link)}
             >
-              <img src={item.image} alt={item.title} className="carousel-image" />
+              <ImageWithLoader src={item.image} alt={item.title} className="carousel-image" fadeInDuration={0.4} />
               <div className="slide-content">
                 <h3 className="slide-title">{item.title}</h3>
                 <p className="slide-desc">{item.description}</p>

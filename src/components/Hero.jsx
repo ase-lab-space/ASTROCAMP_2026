@@ -28,7 +28,7 @@ const Hero = () => {
           宇宙への憧れを、確かな技術へ。<br />
           学生・社会人を対象とした、本気の宇宙開発強化合宿。
         </p> */}
-        <a href="#activities" className="neon-btn">Mission Start</a>
+        <a href="#activities" className="neon-btn">APPLY</a>
       </div>
     </section>
   );

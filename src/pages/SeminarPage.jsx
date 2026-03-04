@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
+import ImageWithLoader from '../components/ImageWithLoader';
 import './SeminarPage.css'; // We'll need to create this or reuse styles
 
 const SeminarPage = ({ data }) => {
@@ -21,8 +22,7 @@ const SeminarPage = ({ data }) => {
                 <h1 className="seminar-title">{data.title}</h1>
                 {data.image && (
                     <div className="seminar-hero-image">
-                        {/* If image is a path string, use it. If it's an imported object, assuming string for now based on PageData example */}
-                        <img src={data.image} alt={data.title} />
+                        <ImageWithLoader src={data.image} alt={data.title} fadeInDuration={0.8} />
                     </div>
                 )}
 

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ImageWithLoader from './ImageWithLoader';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,12 +45,12 @@ const ActivityCard = ({ activity, index }) => {
       className={`activity-card ${isReverse ? 'reverse' : ''}`}
     >
       <div className="activity-image">
-        <img src={activity.image} alt={activity.title} />
+        <ImageWithLoader src={activity.image} alt={activity.title} fadeInDuration={0.8} />
       </div>
       <div className="activity-content">
         <h3 className="activity-title">{activity.title}</h3>
         <p className="activity-desc">{activity.description}</p>
-        <Link to={activity.path} className="neon-btn">View Details</Link>
+        <Link to={activity.path} className="neon-btn">APPLY</Link>
       </div>
     </div>
   );
