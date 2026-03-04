@@ -1,12 +1,12 @@
 /* FloatingButton.css */
 .floating-button {
-  margin-bottom: 40px;
-  margin-right: 40px;
+  margin-bottom: clamp(16px, 3vw, 40px);
+  margin-right: clamp(16px, 3vw, 40px);
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 180px;
-  height: 180px;
+  bottom: clamp(12px, 2vw, 24px);
+  right: clamp(12px, 2vw, 24px);
+  width: clamp(100px, 12vw, 180px);
+  height: clamp(100px, 12vw, 180px);
   border-radius: 50%;
   background: linear-gradient(135deg, #F4A261 0%, #E87A3D 50%, #D35400 100%);
   border: none;
@@ -60,24 +60,24 @@
 
 .floating-button h1 {
   position: absolute;
-  bottom: 120px;
-  font-size: 30px;
+  bottom: 67%;
+  font-size: clamp(14px, 2vw, 30px);
   color: white;
   white-space: nowrap;
 }
 
 .floating-button p {
   position: absolute;
-  bottom: 40px;
-  font-size: 70px;
+  bottom: 22%;
+  font-size: clamp(32px, 4.5vw, 70px);
   color: white;
   white-space: nowrap;
 }
 
 .floating-button h2 {
   position: absolute;
-  bottom: 20px;
-  font-size: 18px;
+  bottom: 11%;
+  font-size: clamp(9px, 1.2vw, 18px);
   color: white;
   white-space: nowrap;
 }
