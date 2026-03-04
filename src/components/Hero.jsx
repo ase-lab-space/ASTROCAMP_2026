@@ -24,11 +24,10 @@ const Hero = () => {
       <div className="hero-content">
         <div><img src={ASTROCAMP2026} alt="LOGO" /></div>
         <h1 className="hero-title">宇宙事業を本気で学ぶ <br />実践的プログラム</h1>
-        {/* <p className="hero-subtitle">
-          宇宙への憧れを、確かな技術へ。<br />
-          学生・社会人を対象とした、本気の宇宙開発強化合宿。
-        </p> */}
-        <a href="#activities" className="neon-btn">APPLY</a>
+        <p className="hero-subtitle" style={{ fontSize: '1.4rem', color: 'var(--color-accent)', letterSpacing: '2px' }}>
+          Coming Soon...
+        </p>
+        <a href="/coming-soon" className="neon-btn">APPLY</a>
       </div>
     </section>
   );

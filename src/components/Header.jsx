@@ -17,7 +17,7 @@ const Header = () => {
           <li><Link to="/"><HomeIcon fontSize="large" /> Home</Link></li>
           <li><a href="/#activities"> <EventIcon fontSize='large' /> Contents</a></li>
           <li><a href="/#news"><NewspaperIcon size={24} /> News</a></li>
-          <li><a href="/#apply" style={{ color: 'var(--color-accent)' }}><SendIcon fontSize='large' />Apply</a></li>
+          <li><Link to="/coming-soon" style={{ color: 'var(--color-accent)' }}><SendIcon fontSize='large' />Apply</Link></li>
         </ul>
       </nav>
     </header>

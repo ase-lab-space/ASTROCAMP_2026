@@ -50,7 +50,7 @@ const ActivityCard = ({ activity, index }) => {
       <div className="activity-content">
         <h3 className="activity-title">{activity.title}</h3>
         <p className="activity-desc">{activity.description}</p>
-        <Link to={activity.path} className="neon-btn">APPLY</Link>
+        <Link to="/coming-soon" className="neon-btn">APPLY</Link>
       </div>
     </div>
   );
