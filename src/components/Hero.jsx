@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import ASTROCAMP2026 from '../assets/ASTRO_CAMP_2026_fix.png'
 
@@ -27,7 +28,7 @@ const Hero = () => {
         <p className="hero-subtitle" style={{ fontSize: '1.4rem', color: 'var(--color-accent)', letterSpacing: '2px' }}>
           Coming Soon...
         </p>
-        <a href="/coming-soon" className="neon-btn">APPLY</a>
+        <Link to="/coming-soon" className="neon-btn">APPLY</Link>
       </div>
     </section>
   );
