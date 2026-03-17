@@ -5,7 +5,11 @@
       "Bash(ls -lh /c/Users/sprin/Github/ASTROCAMP_2026/src/assets/*.jpg /c/Users/sprin/Github/ASTROCAMP_2026/src/assets/*.JPG /c/Users/sprin/Github/ASTROCAMP_2026/src/assets/*.png)",
       "Bash(npm run build)",
       "mcp__claude_ai_Zapier__google_tasks_create_task",
-      "Bash(gh repo view --json nameWithOwner -q '.nameWithOwner')"
+      "Bash(gh repo view --json nameWithOwner -q '.nameWithOwner')",
+      "Bash(gh auth status)",
+      "Bash(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')",
+      "WebFetch(domain:docs.google.com)",
+      "Bash(ls -1 src/data/*.md)"
     ]
   }
 }
