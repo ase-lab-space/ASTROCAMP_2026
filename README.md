@@ -37,16 +37,20 @@ feat/* ──PR──▶ main ──PR──▶ release
 
 ### ワークフロー
 
-1. `main` から `feat/○○` ブランチを切る
-2. 作業完了後、`main` へ PR を作成 → Vercel プレビューURLで確認
-3. レビュー承認後、`main` にマージ
-4. 本番公開の準備ができたら `main` → `release` へ PR を作成
-5. 関係者チェック後、`release` にマージ → 本番反映
+1. 対応する GitHub Issue を作成する（なければ）
+2. `main` から `feat/○○` ブランチを切る
+3. 作業完了後、`main` へ PR を作成
+   - PR本文に `Closes #Issue番号` を記載して Issue と紐づける
+   - Vercel プレビューURLで動作確認
+4. レビュー承認後、`main` にマージ → Issue が自動クローズ
+5. 本番公開の準備ができたら `main` → `release` へ PR を作成
+6. 関係者チェック後、`release` にマージ → 本番反映
 
-### ブランチ命名規則
+### 命名規則
 
-- `feat/○○` — 新機能（例: `feat/seminar-pages`）
-- `fix/○○` — バグ修正（例: `fix/routing-error`）
+- **ブランチ**: `feat/○○` (新機能) / `fix/○○` (バグ修正)
+  - 例: `feat/seminar-pages`, `fix/routing-error`
+- **Issue → ブランチ対応例**: Issue #16「ゼミ詳細ページ」 → `feat/seminar-pages`
 
 ## デプロイ
 
