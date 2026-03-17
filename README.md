@@ -1,16 +1,56 @@
-# React + Vite
+# ASTRO CAMP 2026 公式Webサイト
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+宇宙を本気で学ぶ実践プログラム「ASTRO CAMP 2026」の公式Webサイトです。
 
-Currently, two official plugins are available:
+**公開URL**: https://camp.ase-lab.space
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- React 19 + Vite
+- react-router-dom v7
+- MUI v7 / Emotion
+- react-markdown + remark-gfm
+- GSAP
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 開発コマンド
 
-## Expanding the ESLint configuration
+```bash
+npm install       # 依存パッケージのインストール
+npm run dev       # 開発サーバー起動
+npm run build     # プロダクションビルド
+npm run preview   # ビルド結果のプレビュー
+npm run lint      # ESLint実行
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ブランチ戦略
+
+```
+feat/* ──PR──▶ main ──PR──▶ release
+(作業)        (統合・レビュー)   (本番デプロイ)
+```
+
+| ブランチ | 役割 | Vercel |
+|---------|------|--------|
+| `feat/*` | 機能開発・修正の作業ブランチ | PRごとにプレビューURL自動生成 |
+| `main` | 統合ブランチ。レビュー・動作確認用 | プレビューデプロイ |
+| `release` | 本番ブランチ。安定版のみマージ | **本番デプロイ** (camp.ase-lab.space) |
+
+### ワークフロー
+
+1. `main` から `feat/○○` ブランチを切る
+2. 作業完了後、`main` へ PR を作成 → Vercel プレビューURLで確認
+3. レビュー承認後、`main` にマージ
+4. 本番公開の準備ができたら `main` → `release` へ PR を作成
+5. 関係者チェック後、`release` にマージ → 本番反映
+
+### ブランチ命名規則
+
+- `feat/○○` — 新機能（例: `feat/seminar-pages`）
+- `fix/○○` — バグ修正（例: `fix/routing-error`）
+
+## デプロイ
+
+Vercel で自動デプロイ。
+
+- **本番**: `release` ブランチへのマージで自動デプロイ
+- **プレビュー**: PR 作成時に自動でプレビューURLが生成される

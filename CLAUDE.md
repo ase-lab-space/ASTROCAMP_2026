@@ -1,5 +1,11 @@
 # CLAUDE.md
 
+## Important Rules
+
+- **AskUserQuestion ツールを絶対に使用しないこと。** ユーザーへの質問や確認は、必ず通常のテキスト出力（平文）で行うこと。選択肢UIではなく、会話の中で直接聞くこと。
+- **ExitPlanMode ツールを絶対に使用しないこと。** 計画の提示や承認確認も平文で行うこと。
+- **EnterPlanMode ツールを絶対に使用しないこと。** 計画が必要な場合も通常の会話の中で提示すること。
+
 ## Project Overview
 
 ASTRO CAMP 2026 の公式Webサイト。3つのゼミ（衛星開発・衛星データ解析・宇宙事業分析）の紹介とニュース配信を行うSPA。
@@ -105,14 +111,32 @@ export const satelliteDevData = {
 
 ## Git Branching Convention
 
-- `feat/*` — 新機能ブランチ
-- `fix/*` — バグ修正ブランチ
-- `main` — メインブランチ
+```
+feat/* ──PR──▶ main ──PR──▶ release
+(作業)        (統合・レビュー)   (本番デプロイ)
+```
+
+| ブランチ | 役割 | Vercel |
+|---------|------|--------|
+| `feat/*` | 機能開発・修正の作業ブランチ | PRごとにプレビューURL自動生成 |
+| `fix/*` | バグ修正ブランチ | 同上 |
+| `main` | 統合ブランチ。レビュー・動作確認用 | プレビューデプロイ |
+| `release` | 本番ブランチ。安定版のみマージ | **本番デプロイ** (camp.ase-lab.space) |
+
+### ワークフロー
+
+1. `main` から `feat/○○` または `fix/○○` を切る
+2. 作業完了後、`main` へ PR → Vercel プレビューURLで確認
+3. レビュー承認後、`main` にマージ
+4. 本番公開準備ができたら `main` → `release` へ PR
+5. 関係者チェック後、`release` にマージ → 本番反映
 
 ## Deployment
 
-Vercel にデプロイ。PRを作成すると自動でプレビューURLが生成される。
-`vercel.json` でSPAのリライトルールを設定済み。
+Vercel にデプロイ。`vercel.json` でSPAのリライトルールを設定済み。
+
+- **本番**: `release` ブランチへのマージで自動デプロイ
+- **プレビュー**: PR作成時にプレビューURL自動生成
 
 ## Styling
 
