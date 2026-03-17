@@ -5,6 +5,8 @@ import satDataHeader1 from '../assets/SatData_Image/notion header_1.png';
 import satDataHeader2 from '../assets/SatData_Image/notion header 2.png';
 import satDataHeader3 from '../assets/SatData_Image/notion header 3.png';
 import satDataHeader4 from '../assets/SatData_Image/notion header 4.png';
+import bizDevHeadImg from '../assets/BizDev_Image/image.webp';
+import bizDevImg from '../assets/BizDev_Image/head.webp';
 
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
@@ -250,7 +252,7 @@ export const satelliteDataAnalysisData = {
 
 export const spaceBusinessData = {
     title: "宇宙ビジネスゼミ",
-    image: "",
+    image: bizDevHeadImg,
     sections: [
         {
             heading: "ゼミの意義・目的",
@@ -262,6 +264,7 @@ export const spaceBusinessData = {
         },
         {
             heading: "概要",
+            image: bizDevImg,
             body: `本ゼミでは「宇宙業界への理解」と「仮説検証能力」の養成を図ります．
 
 **宇宙業界への理解**: 宇宙分野がもつ特徴や必要な主技術，その業界構造，宇宙企業に関する基礎知識を事前学習で養成します．
