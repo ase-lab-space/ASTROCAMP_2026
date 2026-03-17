@@ -1,8 +1,14 @@
 import hujitasanImg from '../assets/hujitasan.JPG';
+import satDevHeadImg from '../assets/SatDev_Image/head.webp';
+import satDevImg from '../assets/SatDev_Image/image.webp';
+import satDataHeader1 from '../assets/SatData_Image/notion header_1.png';
+import satDataHeader2 from '../assets/SatData_Image/notion header 2.png';
+import satDataHeader3 from '../assets/SatData_Image/notion header 3.png';
+import satDataHeader4 from '../assets/SatData_Image/notion header 4.png';
 
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
-    image: hujitasanImg,
+    image: satDevHeadImg,
     sections: [
         {
             heading: "ゼミの意義・目的",
@@ -14,6 +20,7 @@ export const satelliteDevData = {
         },
         {
             heading: "概要",
+            image: satDevImg,
             body: `このゼミでは，人工衛星をモデルにしたシステムのソフトウェアをチームで開発します．人工衛星には多様なサブシステムがあり，その一部を模擬したシステムを扱います．具体的には，サンセンサを模擬したフォトダイオードとジャイロセンサで姿勢を推定，一軸のリアクションホイールで姿勢を制御し，対象の物体をカメラで撮影するミッションを行い，そのデータを無線通信でダウンリンクするというものです．最後に開発全体を振り返り反省としてまとめ，キャンプの最後に発表し合います．`
         },
         {
@@ -123,7 +130,7 @@ export const satelliteDevData = {
 
 export const satelliteDataAnalysisData = {
     title: "衛星データ解析ゼミ",
-    image: "",
+    image: satDataHeader1,
     sections: [
         {
             heading: "ゼミの意義・目的",
@@ -135,6 +142,7 @@ export const satelliteDataAnalysisData = {
         },
         {
             heading: "概要",
+            image: satDataHeader2,
             body: `1つの共通したお題（国内自治体の課題）に対して，チームごとに異なる評価指標で挑みます．全員が同じエリア・同じデータを見るため，レビューや最終発表で多角的な議論が可能です．
 
 **課題テーマ**: 国内自治体の問題："限られた予算と人員で，広域の状態をどう把握するか"
@@ -190,12 +198,14 @@ export const satelliteDataAnalysisData = {
         },
         {
             heading: "主催者メッセージ",
+            image: satDataHeader3,
             body: `解析結果は出た瞬間がゴールではなく，そこからスタートです．衛星データ解析においてAIの使用を避けることは不可能に近い．つまり衛星データ解析を行うエンジニアは単にコードを書く人ではなく，社会やビジネスで使われる判断の根拠を背負います．
 
 本ゼミでは"答えを出す力"より"答えを扱う力"と"問いを立てる力"を重視します．`
         },
         {
             heading: "シラバス",
+            image: satDataHeader4,
             body: `### 事前学習（8週間・オンライン）
 
 | 週 | テーマ | 内容 |

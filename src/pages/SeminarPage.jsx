@@ -29,6 +29,11 @@ const SeminarPage = ({ data }) => {
                 <div className="seminar-content">
                     {data.sections.map((section, index) => (
                         <section key={index} className="seminar-section">
+                            {section.image && (
+                                <div className="seminar-section-image">
+                                    <ImageWithLoader src={section.image} alt={section.heading} fadeInDuration={0.8} />
+                                </div>
+                            )}
                             <h2 className="seminar-heading">{section.heading}</h2>
                             <div className="seminar-body">
                                 <Markdown remarkPlugins={[remarkGfm]}>{section.body}</Markdown>
