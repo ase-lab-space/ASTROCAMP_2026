@@ -1,5 +1,4 @@
 import hujitasanImg from '../assets/hujitasan.JPG';
-import satDevHeadImg from '../assets/SatDev_Image/head.webp';
 import satDevImg from '../assets/SatDev_Image/image.webp';
 import satDataHeader1 from '../assets/SatData_Image/notion header_1.png';
 import satDataHeader2 from '../assets/SatData_Image/notion header 2.png';
@@ -7,7 +6,7 @@ import satDataHeader3 from '../assets/SatData_Image/notion header 3.png';
 import satDataHeader4 from '../assets/SatData_Image/notion header 4.png';
 import bizDevHeadImg from '../assets/BizDev_Image/image.webp';
 import bizDevImg from '../assets/BizDev_Image/head2.avif';
-import bizDevUp from '../assets/BizDev_Image/UP.JPG';
+// import bizDevUp from '../assets/BizDev_Image/UP.JPG';
 import bizDevFusen from '../assets/BizDev_Image/付箋.JPG';
 import bizDevSpaceLaw from '../assets/BizDev_Image/宇宙法入門.JPG';
 import bizDevSeto from '../assets/BizDev_Image/瀬戸様.JPG';
@@ -15,7 +14,7 @@ import bizDevGi from '../assets/BizDev_Image/議.JPG';
 
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
-    image: satDevHeadImg,
+    image: satDevImg,
     sections: [
         {
             heading: "ゼミの意義・目的",
@@ -27,7 +26,6 @@ export const satelliteDevData = {
         },
         {
             heading: "概要",
-            image: satDevImg,
             body: `このゼミでは，人工衛星をモデルにしたシステムのソフトウェアをチームで開発します．人工衛星には多様なサブシステムがあり，その一部を模擬したシステムを扱います．具体的には，サンセンサを模擬したフォトダイオードとジャイロセンサで姿勢を推定，一軸のリアクションホイールで姿勢を制御し，対象の物体をカメラで撮影するミッションを行い，そのデータを無線通信でダウンリンクするというものです．人工衛星のような複雑なシステムをチームで開発するにあたり，各領域の根本的な原理の理解や，具体的な開発手法の型を学び体験することで，あらゆる工程において根拠を持つスキルを身に着けます．最後に開発全体を振り返り反省としてまとめ，キャンプの最後に発表し合います．`
         },
         {
@@ -50,7 +48,7 @@ export const satelliteDevData = {
         },
         {
             heading: "対象者",
-            body: `**こんな人を歓迎します**:
+            body: `**対象者像**:
 - 将来，宇宙産業・企業などでエンジニアとして働きたい学生
 - または他領域への進路を希望しつつ，エンジニアの働き方を知っておきたい学生
 
@@ -180,7 +178,7 @@ export const satelliteDataAnalysisData = {
         },
         {
             heading: "対象者",
-            body: `**こんな人を歓迎します**:
+            body: `**対象者像**:
 - "衛星データを使う側"として意思決定に関わりたい学生
 - "手法を知っている"ではなく"正しいかどうかを判断できる"エンジニア／データサイエンティスト志向
 - "この結果は信用できるのか？"を問い続けたい学生
@@ -245,7 +243,9 @@ export const satelliteDataAnalysisData = {
         },
         {
             heading: "選考",
-            body: `### Q1
+            body: `これらの質問は，ゼミの前提スキルを持った推奨ターゲット層の学生であるかを確認して選考するためのものです．ゼミで実施する内容は事前スキルとしては当然必要なく，それを吸収するだけのポテンシャルがあるかどうかを判断して選考を行います．
+
+### Q1
 これまでの解析・研究・開発で"結果が出たが，そのまま信じてよいか疑問を持った経験"を一つ挙げ，疑問を解消するための行動を教えてください．
 - 例：ツール（計算機やAI）が出した答えが直感や物理法則と合わず，XXという方法を使って検証した
 
@@ -268,7 +268,7 @@ export const spaceBusinessData = {
     sections: [
         {
             heading: "ゼミの意義・目的",
-            image: bizDevUp,
+            // image: bizDevUp,
             body: `宇宙開発分野が政府主導のオールドスペースから民間主導のニュースペースへと移行したことで，市場規模が急激に拡大しました．それに伴い，宇宙人材の供給不足が深刻となりつつあります．
 
 宇宙産業は多種多様なバリューチェーンが存在し，部品供給からロケット打ち上げ，衛星運用，データ利用に至るまでサプライチェーンが極めて長く複雑な「重厚長大なBtoB産業」です．そして打ち上げ失敗や遅延，法規制，数年単位のリードタイムといった，地上ビジネスとは比較にならないほどの不確実性とリスクを孕んでいます．
@@ -300,7 +300,7 @@ export const spaceBusinessData = {
         },
         {
             heading: "対象者",
-            body: `**こんな人を歓迎します**:
+            body: `**対象者像**:
 - 将来，宇宙産業・企業へ参入したい学生
 - 宇宙業界を分野横断的に理解した状態での就職・研究を望む学生
 - あらゆる場において，根拠のある判断を行えるようになりたい学生
