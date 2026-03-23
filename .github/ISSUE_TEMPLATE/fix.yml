@@ -1,0 +1,39 @@
+name: "バグ・不具合報告"
+description: "バグや不具合の報告"
+labels: ["bug"]
+body:
+  - type: input
+    id: reporter
+    attributes:
+      label: 報告者
+      description: あなたの名前を入力してください
+      placeholder: "例: 山田太郎"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: どのような操作をすると不具合が発生しますか？
+      placeholder: |
+        1. トップページを開く
+        2. ○○ボタンをクリック
+        3. エラーが表示される
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+      description: 本来どう動くべきですか？
+      placeholder: "例: ○○ページに遷移するはず"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 画面キャプチャがあれば添付してください（任意）
+      placeholder: "画像をドラッグ＆ドロップ、またはURLを貼り付け"
+    validations:
+      required: false
