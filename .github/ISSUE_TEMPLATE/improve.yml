@@ -1,0 +1,36 @@
+name: "デザイン・パフォーマンス改善"
+description: "デザインやパフォーマンスの改善提案"
+labels: ["improve"]
+body:
+  - type: input
+    id: reporter
+    attributes:
+      label: 報告者
+      description: あなたの名前を入力してください
+      placeholder: "例: 山田太郎"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状の問題点
+      description: 現在どのような問題がありますか？
+      placeholder: "例: スマホで見るとフォントが小さすぎて読みにくい"
+    validations:
+      required: true
+  - type: textarea
+    id: ideal
+    attributes:
+      label: 改善イメージ
+      description: どうなっていてほしいですか？
+      placeholder: "例: スマホでも快適に読めるフォントサイズにしたい"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 画面キャプチャがあれば添付してください（任意）
+      placeholder: "画像をドラッグ＆ドロップ、またはURLを貼り付け"
+    validations:
+      required: false

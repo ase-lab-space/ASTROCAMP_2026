@@ -31,7 +31,9 @@ feat/* ──PR──▶ main ──PR──▶ release
 
 | ブランチ | 役割 | Vercel |
 |---------|------|--------|
-| `feat/*` | 機能開発・修正の作業ブランチ | PRごとにプレビューURL自動生成 |
+| `feat/*` | 新機能の作業ブランチ | PRごとにプレビューURL自動生成 |
+| `fix/*` | バグ修正ブランチ | 同上 |
+| `improve/*` | デザイン・パフォーマンス改善ブランチ | 同上 |
 | `main` | 統合ブランチ。レビュー・動作確認用 | プレビューデプロイ |
 | `release` | 本番ブランチ。安定版のみマージ | **本番デプロイ** (camp.ase-lab.space) |
 
@@ -48,8 +50,8 @@ feat/* ──PR──▶ main ──PR──▶ release
 
 ### 命名規則
 
-- **ブランチ**: `feat/○○` (新機能) / `fix/○○` (バグ修正)
-  - 例: `feat/seminar-pages`, `fix/routing-error`
+- **ブランチ**: `feat/○○` (新機能) / `fix/○○` (バグ修正) / `improve/○○` (改善)
+  - 例: `feat/seminar-pages`, `fix/routing-error`, `improve/mobile-font-size`
 - **Issue → ブランチ対応例**: Issue #16「ゼミ詳細ページ」 → `feat/seminar-pages`
 
 ## デプロイ

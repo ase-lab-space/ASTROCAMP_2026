@@ -1,0 +1,38 @@
+name: "新機能リクエスト"
+description: "新しい機能やページの追加リクエスト"
+labels: ["feat"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: どんな機能を追加したいですか？
+      placeholder: "例: 主催者メッセージをカード風に強調表示したい"
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的・背景
+      description: なぜこの機能が必要ですか？
+      placeholder: "例: 去年のサイトでは強調されていて好評だったため"
+    validations:
+      required: true
+  - type: textarea
+    id: approach
+    attributes:
+      label: 対応方針（案）
+      description: 実装方法のアイデアがあれば記載してください（任意）
+      placeholder: "例: SeminarPage.css で背景色を変えてボックスで囲む"
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考ファイル
+      description: 関連するファイルパスや参考URLがあれば（任意）
+      placeholder: |
+        - src/pages/SeminarPage.jsx
+        - https://example.com
+    validations:
+      required: false
