@@ -1,6 +1,6 @@
 name: "バグ・不具合報告"
 description: "バグや不具合の報告"
-labels: ["fix"]
+labels: ["bug"]
 body:
   - type: input
     id: reporter

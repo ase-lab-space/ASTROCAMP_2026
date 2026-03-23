@@ -1,13 +1,13 @@
 name: "新機能リクエスト"
-description: "新しい機能やページの追加リクエスト"
-labels: ["feat"]
+description: "新しいページ・コンポーネント・機能の追加リクエスト"
+labels: ["feature"]
 body:
   - type: textarea
     id: summary
     attributes:
       label: 概要
       description: どんな機能を追加したいですか？
-      placeholder: "例: 主催者メッセージをカード風に強調表示したい"
+      placeholder: "例: ニュース記事にSNSシェアボタンを追加したい"
     validations:
       required: true
   - type: textarea
@@ -15,7 +15,7 @@ body:
     attributes:
       label: 目的・背景
       description: なぜこの機能が必要ですか？
-      placeholder: "例: 去年のサイトでは強調されていて好評だったため"
+      placeholder: "例: 記事を見た人が簡単にシェアできるようにしたい"
     validations:
       required: true
   - type: textarea
@@ -23,7 +23,7 @@ body:
     attributes:
       label: 対応方針（案）
       description: 実装方法のアイデアがあれば記載してください（任意）
-      placeholder: "例: SeminarPage.css で背景色を変えてボックスで囲む"
+      placeholder: "例: react-share ライブラリを使ってTwitter/LINE共有ボタンを追加"
     validations:
       required: false
   - type: textarea
