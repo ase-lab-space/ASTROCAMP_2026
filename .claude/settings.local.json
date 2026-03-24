@@ -9,7 +9,21 @@
       "Bash(gh auth status)",
       "Bash(gh repo view --json defaultBranchRef --jq '.defaultBranchRef.name')",
       "WebFetch(domain:docs.google.com)",
-      "Bash(ls -1 src/data/*.md)"
+      "Bash(ls -1 src/data/*.md)",
+      "Bash(gh issue list --repo ase-lab-space/ASTROCAMP_2026 --state all --limit 30)",
+      "Bash(gh issue view 16 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 19 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 20 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 21 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 22 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 23 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 3 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue view 24 --repo ase-lab-space/ASTROCAMP_2026)",
+      "Bash(gh issue edit 19 --repo ase-lab-space/ASTROCAMP_2026 --remove-label bug --add-label improve)",
+      "Bash(gh issue edit 23 --repo ase-lab-space/ASTROCAMP_2026 --add-label feature)",
+      "Bash(gh issue comment 16 --repo ase-lab-space/ASTROCAMP_2026 --body \"## 追加要望（Discord 3/24）:*)",
+      "Bash(gh issue comment 22 --repo ase-lab-space/ASTROCAMP_2026 --body \"## 状況メモ（2026-03-24）:*)",
+      "Bash(gh issue create --repo ase-lab-space/ASTROCAMP_2026 --title \"ゼミ企画者プロフィールセクションの追加\" --label \"feature\" --body \"## 概要:*)"
     ]
   }
 }
