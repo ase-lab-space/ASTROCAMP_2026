@@ -38,6 +38,23 @@ const SeminarPage = ({ data }) => {
                             <div className="seminar-body">
                                 <Markdown remarkPlugins={[remarkGfm]}>{section.body}</Markdown>
                             </div>
+                            {section.heading === "主催者メッセージ" && data.profile && (
+                                <div className="profile-card">
+                                    <div className="profile-card-photo">
+                                        {data.profile.image ? (
+                                            <ImageWithLoader src={data.profile.image} alt={data.profile.name} fadeInDuration={0.8} />
+                                        ) : (
+                                            <div className="profile-card-placeholder" />
+                                        )}
+                                    </div>
+                                    <div className="profile-card-info">
+                                        <h3 className="profile-card-name">{data.profile.name}</h3>
+                                        <p className="profile-card-role">{data.profile.role}</p>
+                                        <p className="profile-card-affiliation">{data.profile.affiliation}</p>
+                                        <p className="profile-card-bio">{data.profile.bio}</p>
+                                    </div>
+                                </div>
+                            )}
                         </section>
                     ))}
                 </div>

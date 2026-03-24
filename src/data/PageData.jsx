@@ -15,6 +15,13 @@ import bizDevGi from '../assets/BizDev_Image/議.JPG';
 export const satelliteDevData = {
     title: "衛星開発ゼミ",
     image: satDevImg,
+    profile: {
+        name: "藤田一槻",
+        role: "衛星開発ゼミ 企画者",
+        affiliation: "東京理科大学大学院 工学研究科 電気工学専攻 修士2年",
+        image: hujitasanImg,
+        bio: "学生ハイブリッドロケットサークルの電装・PMや、JAXA主催 Kibo-RPC 日本代表などを経験。2023年から株式会社ArkEdge Spaceにてインターンとして超小型衛星の開発に携わる。Maker Faire Tokyo（Young Maker Challenge）最優秀賞受賞。昨年度に引き続き衛星開発ゼミの企画者を担当。",
+    },
     sections: [
         {
             heading: "概要",
@@ -134,6 +141,13 @@ export const satelliteDevData = {
 export const satelliteDataAnalysisData = {
     title: "衛星データ解析ゼミ",
     image: satDataHeader1,
+    profile: {
+        name: "神田芽生",
+        role: "衛星データ解析ゼミ 企画者",
+        affiliation: "東京大学大学院 理学系研究科 地球惑星科学専攻 修士2年",
+        image: null,
+        bio: "University of Toronto Physics & Astrophysics specialist, Statistics minor卒。CERN ATLAS実験の素粒子検出器開発やカオス系シミュレーション研究に従事。ギリア・天地人にて機械学習と物理モデル・衛星データ融合のインターンを経験。2021年にASE-Lab.にて衛星データ解析ゼミを開講以来、小学生から社会人を対象にした衛星データ教育活動を展開。",
+    },
     sections: [
         {
             heading: "概要",
@@ -265,6 +279,13 @@ export const satelliteDataAnalysisData = {
 export const spaceBusinessData = {
     title: "宇宙ビジネスゼミ",
     image: bizDevHeadImg,
+    profile: {
+        name: "東本橙和",
+        role: "宇宙ビジネスゼミ 企画者",
+        affiliation: "慶應義塾大学 理工学部 機械工学科 2年",
+        image: null,
+        bio: "缶サット甲子園全国大会ベストプレゼンテーション賞受賞。宇宙開発フォーラムPD/WS企画や宇宙学際シンポジウムへの参加を中心に活動。アストロキャンプ2025参加経験あり。宇宙法模擬裁判日本大会2026にて原告書面第3位受賞。本年度初実施の宇宙ビジネスゼミ企画者を担当。",
+    },
     sections: [
         {
             heading: "概要",
