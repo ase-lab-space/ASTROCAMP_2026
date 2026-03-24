@@ -28,7 +28,7 @@ const SeminarPage = ({ data }) => {
 
                 <div className="seminar-content">
                     {data.sections.map((section, index) => (
-                        <section key={index} className="seminar-section">
+                        <section key={index} className={`seminar-section${section.heading === "主催者メッセージ" ? " seminar-section--highlight" : ""}`}>
                             {section.image && (
                                 <div className="seminar-section-image">
                                     <ImageWithLoader src={section.image} alt={section.heading} fadeInDuration={0.8} />

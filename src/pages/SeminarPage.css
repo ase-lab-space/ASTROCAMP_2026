@@ -85,6 +85,19 @@
     color: #e0e6ed;
 }
 
+/* 主催者メッセージ強調ボックス */
+.seminar-section--highlight {
+    background: #192237;
+    border-left: 4px solid #E87A3D;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.seminar-section--highlight .seminar-heading {
+    color: #fff;
+    border-bottom-color: rgba(232, 122, 61, 0.5);
+}
+
 /* Markdown Styles */
 .seminar-body p {
     margin-bottom: 1.5rem;
