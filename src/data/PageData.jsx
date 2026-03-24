@@ -137,7 +137,7 @@ export const satelliteDataAnalysisData = {
     sections: [
         {
             heading: "概要",
-            image: satDataHeader2,
+            // image: satDataHeader2,
             body: `1つの共通したお題（国内自治体の課題）に対して，チームごとに異なる評価指標で挑みます．全員が同じエリア・同じデータを見るため，レビューや最終発表で多角的な議論が可能です．
 
 **課題テーマ**: 国内自治体の問題："限られた予算と人員で，広域の状態をどう把握するか"
@@ -202,7 +202,7 @@ export const satelliteDataAnalysisData = {
         },
         {
             heading: "主催者メッセージ",
-            image: satDataHeader3,
+            // image: satDataHeader3,
             body: `皆さんは生成AIが導き出した『答え』に対して，物理的な裏付けを伴う根拠を提示したことはありますか．その回答が「絶対に正しい」と言い切れる確証は，果たしてどこにあるのでしょうか．
 
 本ゼミの中核は，物理法則や観測理論に立ち返り，結果との整合性を徹底的に問い直す「人的ファクトチェック」にあります．
