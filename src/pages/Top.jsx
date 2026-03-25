@@ -22,7 +22,7 @@ const Top = () => {
                 <h2 className='section-title'>CONTENTS</h2>
                 <Carousel />
             </section>
-            {/* <News /> */}
+            <News />
             <footer id="footer">
                 <Footer />
             </footer>
