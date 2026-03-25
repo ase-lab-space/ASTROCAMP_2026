@@ -260,6 +260,12 @@
         font-size: 1.5rem;
     }
 
+    .seminar-body table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .profile-card {
         flex-direction: column;
         align-items: center;
