@@ -1,5 +1,21 @@
 export const newsData = [
   {
+    id: 2,
+    date: "2026.03.18",
+    category: "お知らせ",
+    title: "各ゼミの詳細ページを公開しました",
+    slug: "seminar-details-2026",
+    content: `## 各ゼミの詳細ページ公開
+
+各ゼミの詳細ページを公開いたしました。各ゼミの概要、シラバス、選考についてご確認いただけます。
+
+- [衛星開発ゼミ](/satellite-dev)
+- [衛星データ解析ゼミ](/satellite-data)
+- [宇宙ビジネスゼミ](/space-business)
+
+応募をご検討の方はぜひご覧ください。`
+  },
+  {
     id: 1,
     date: "2026.03.04",
     category: "お知らせ",
