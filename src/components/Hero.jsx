@@ -28,7 +28,7 @@ const Hero = () => {
         <p className="hero-subtitle" style={{ fontSize: '1.4rem', color: 'var(--color-accent)', letterSpacing: '2px' }}>
           Coming Soon...
         </p>
-        <Link to="/coming-soon" className="neon-btn">APPLY</Link>
+        <a href="https://astro-camp.notion.site/2025-1c8f492792ce803da2c2d55f35cdf48e" className="neon-btn neon-btn--filled" target="_blank" rel="noopener noreferrer">2025年のページはこちら</a>
       </div>
     </section>
   );

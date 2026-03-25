@@ -1,0 +1,36 @@
+name: "改善提案"
+description: "見た目の改善・アニメーション修正・パフォーマンス向上（新コンポーネント追加を伴わないもの）"
+labels: ["improve"]
+body:
+  - type: input
+    id: reporter
+    attributes:
+      label: 報告者
+      description: あなたの名前を入力してください
+      placeholder: "例: 山田太郎"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: 現状の問題点
+      description: 現在どのような問題がありますか？
+      placeholder: "例: ヒーローセクションのフェードインが遅すぎて表示まで待たされる"
+    validations:
+      required: true
+  - type: textarea
+    id: ideal
+    attributes:
+      label: 改善イメージ
+      description: どうなっていてほしいですか？
+      placeholder: "例: アニメーション時間を短くしてすぐコンテンツが見えるようにしたい"
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 画面キャプチャがあれば添付してください（任意）
+      placeholder: "画像をドラッグ＆ドロップ、またはURLを貼り付け"
+    validations:
+      required: false

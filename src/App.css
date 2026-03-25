@@ -256,6 +256,22 @@ body {
   box-shadow: 0 0 20px var(--color-accent), 0 0 50px var(--color-accent);
 }
 
+.neon-btn--filled {
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.5rem;
+  text-transform: none;
+  border-color: #fff;
+}
+
+.neon-btn--filled:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
 /* --- フッター --- */
 .footer {
   bottom: 0;
