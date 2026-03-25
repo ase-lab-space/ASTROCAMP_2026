@@ -229,6 +229,13 @@
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+.seminar-body td:first-child,
+.seminar-body th:first-child,
+.seminar-body td:nth-child(2),
+.seminar-body th:nth-child(2) {
+    white-space: nowrap;
+}
+
 @media (max-width: 768px) {
     .seminar-page {
         padding-top: 120px;

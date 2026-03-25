@@ -1,4 +1,6 @@
 import hujitasanImg from '../assets/hujitasan.JPG';
+import kandasanImg from '../assets/kandasan.png';
+import higashimotokunImg from '../assets/higashimotokun.png';
 import satDevImg from '../assets/SatDev_Image/image.webp';
 import satDataHeader1 from '../assets/SatData_Image/notion header_1.png';
 import satDataHeader2 from '../assets/SatData_Image/notion header 2.png';
@@ -96,13 +98,13 @@ export const satelliteDevData = {
 
 | 週 | テーマ | 宿題 |
 |----|--------|------|
-| Week 1 | オリエンテーション | Pico SDKの環境構築 / gitの環境構築 |
-| Week 2 | マイコンの基礎・Lチカ解説，データシート・リファレンスの読み方 | ペリフェラルの調査・理解 / デバッグツールの調査 |
-| Week 3 | 調査課題発表，センサのサンプルプログラムの解説 | サンプルプログラムの作成方法の検討 |
-| Week 4 | 課題レビュー・テスト / シミュレーション・調査課題発表・チーム分け発表 | チームごとに顔合わせ／サブ：[NI] xILSの話（未定） |
-| Week 5 | ミッション / ハードウェアの解説・マネジメントの方針 | チームごとに開発計画の立案／サブ：[Astro] 衛星の話・実際のミッション |
-| Week 6 | 開発計画のレビュー | 開発開始／サブ：[Astro] 正解が出せない状態でどう手を打つか |
-| Week 7 | 計画・開発状況に対するチームごとのレビュー | 開発継続／サブ：[ホンダ] FTA？ |
+| Week 1 | オリエンテーション | Pico SDKの環境構築 /<br>gitの環境構築 |
+| Week 2 | マイコンの基礎・Lチカ解説，<br>データシート・リファレンスの読み方 | ペリフェラルの調査・理解 /<br>デバッグツールの調査 |
+| Week 3 | 調査課題発表，<br>センサのサンプルプログラムの解説 | サンプルプログラムの作成方法の検討 |
+| Week 4 | 課題レビュー・テスト /<br>シミュレーション・調査課題発表・チーム分け発表 | チームごとに顔合わせ／<br>サブ：[NI] xILSの話（未定） |
+| Week 5 | ミッション /<br>ハードウェアの解説・マネジメントの方針 | チームごとに開発計画の立案／<br>サブ：[Astro] 衛星の話・実際のミッション |
+| Week 6 | 開発計画のレビュー | 開発開始／<br>サブ：[Astro] 正解が出せない状態でどう手を打つか |
+| Week 7 | 計画・開発状況に対するチームごとのレビュー | 開発継続／<br>サブ：[ホンダ] FTA？ |
 
 ### キャンプ期間（4泊5日）
 
@@ -145,7 +147,7 @@ export const satelliteDataAnalysisData = {
         name: "神田芽生",
         role: "衛星データ解析ゼミ 企画者",
         affiliation: "東京大学大学院 理学系研究科 地球惑星科学専攻 修士2年",
-        image: null,
+        image: kandasanImg,
         bio: "University of Toronto Physics & Astrophysics specialist, Statistics minor卒。CERN ATLAS実験の素粒子検出器開発やカオス系シミュレーション研究に従事。ギリア・天地人にて機械学習と物理モデル・衛星データ融合のインターンを経験。2021年にASE-Lab.にて衛星データ解析ゼミを開講以来、小学生から社会人を対象にした衛星データ教育活動を展開。",
     },
     sections: [
@@ -283,13 +285,13 @@ export const spaceBusinessData = {
         name: "東本橙和",
         role: "宇宙ビジネスゼミ 企画者",
         affiliation: "慶應義塾大学 理工学部 機械工学科 2年",
-        image: null,
+        image: higashimotokunImg,
         bio: "缶サット甲子園全国大会ベストプレゼンテーション賞受賞。宇宙開発フォーラムPD/WS企画や宇宙学際シンポジウムへの参加を中心に活動。アストロキャンプ2025参加経験あり。宇宙法模擬裁判日本大会2026にて原告書面第3位受賞。本年度初実施の宇宙ビジネスゼミ企画者を担当。",
     },
     sections: [
         {
             heading: "概要",
-            image: bizDevImg,
+            // image: bizDevImg,
             body: `本ゼミでは「宇宙業界への理解」と「仮説検証能力」の養成を図ります．
 
 **宇宙業界への理解**: 宇宙分野がもつ特徴や必要な主技術，その業界構造，宇宙企業に関する基礎知識を事前学習で養成します．
@@ -346,7 +348,7 @@ export const spaceBusinessData = {
         },
         {
             heading: "主催者メッセージ",
-            image: bizDevSeto,
+            // image: bizDevSeto,
             body: `「宇宙ビジネスゼミ」の企画担当をしております，東本です．
 
 宇宙開発分野が過渡期に入っています．米国を中心に，世界の宇宙開発が政府主導のオールドスペースから民間主導のニュースペースへと移行したことで，市場規模が急激に拡大しました．日本においても「宇宙戦略基金」を中心に，宇宙ビジネスを成長させるための様々な施策が実施されています．

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
@@ -36,7 +37,7 @@ const SeminarPage = ({ data }) => {
                             )}
                             <h2 className="seminar-heading">{section.heading}</h2>
                             <div className="seminar-body">
-                                <Markdown remarkPlugins={[remarkGfm]}>{section.body}</Markdown>
+                                <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{section.body}</Markdown>
                             </div>
                             {section.heading === "主催者メッセージ" && data.profile && (
                                 <div className="profile-card">
