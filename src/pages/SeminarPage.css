@@ -248,6 +248,10 @@
         width: auto;
     }
 
+    .seminar-hero-image .image-loader-container {
+        min-height: auto;
+    }
+
     .seminar-title {
         font-size: 2rem;
     }
