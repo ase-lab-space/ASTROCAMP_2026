@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Background from '../components/Background';
@@ -28,7 +29,7 @@ const SeminarPage = ({ data }) => {
 
                 <div className="seminar-content">
                     {data.sections.map((section, index) => (
-                        <section key={index} className="seminar-section">
+                        <section key={index} className={`seminar-section${section.heading === "主催者メッセージ" ? " seminar-section--highlight" : ""}`}>
                             {section.image && (
                                 <div className="seminar-section-image">
                                     <ImageWithLoader src={section.image} alt={section.heading} fadeInDuration={0.8} />
@@ -36,8 +37,25 @@ const SeminarPage = ({ data }) => {
                             )}
                             <h2 className="seminar-heading">{section.heading}</h2>
                             <div className="seminar-body">
-                                <Markdown remarkPlugins={[remarkGfm]}>{section.body}</Markdown>
+                                <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>{section.body}</Markdown>
                             </div>
+                            {section.heading === "主催者メッセージ" && data.profile && (
+                                <div className="profile-card">
+                                    <div className="profile-card-photo">
+                                        {data.profile.image ? (
+                                            <ImageWithLoader src={data.profile.image} alt={data.profile.name} fadeInDuration={0.8} />
+                                        ) : (
+                                            <div className="profile-card-placeholder" />
+                                        )}
+                                    </div>
+                                    <div className="profile-card-info">
+                                        <h3 className="profile-card-name">{data.profile.name}</h3>
+                                        <p className="profile-card-role">{data.profile.role}</p>
+                                        <p className="profile-card-affiliation">{data.profile.affiliation}</p>
+                                        <p className="profile-card-bio">{data.profile.bio}</p>
+                                    </div>
+                                </div>
+                            )}
                         </section>
                     ))}
                 </div>

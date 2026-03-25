@@ -295,12 +295,21 @@ body {
     padding: 0.5rem 1rem;
   }
 
+  .nav {
+    min-width: 0;
+    overflow: hidden;
+  }
+
   .nav ul {
     gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
   }
 
   .nav a {
     font-size: 1rem;
+    white-space: nowrap;
   }
 
   .logo {
