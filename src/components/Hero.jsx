@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import ASTROCAMP2026 from '../assets/ASTRO_CAMP_2026_fix.png'
+import { useReducedMotion } from '../hooks/useReducedMotion';
 
 const Hero = () => {
   const containerRef = useRef(null);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
+    if (prefersReduced) return;
+
     const ctx = gsap.context(() => {
       gsap.from(".hero-content", {
         duration: 1.5,
@@ -18,7 +21,7 @@ const Hero = () => {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [prefersReduced]);
 
   return (
     <section id="home" className="hero" ref={containerRef}>

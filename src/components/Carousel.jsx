@@ -53,7 +53,7 @@ const Carousel = () => {
               className={`carousel-slide ${index === currentIndex ? 'active' : ''}`}
               onClick={() => handleLinkClick(item.link)}
             >
-              <ImageWithLoader src={item.image} alt={item.title} className="carousel-image" fadeInDuration={0.4} />
+              <ImageWithLoader src={item.image} alt={item.title} className="carousel-image" />
               <div className="slide-content">
                 <h3 className="slide-title">{item.title}</h3>
                 <p className="slide-desc">{item.description}</p>
