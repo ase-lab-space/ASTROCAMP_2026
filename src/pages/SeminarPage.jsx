@@ -22,7 +22,7 @@ const SeminarPage = ({ data }) => {
                 <h1 className="seminar-title">{data.title}</h1>
                 {data.image && (
                     <div className="seminar-hero-image">
-                        <ImageWithLoader src={data.image} alt={data.title} fadeInDuration={0.8} />
+                        <ImageWithLoader src={data.image} alt={data.title} />
                     </div>
                 )}
 
@@ -31,7 +31,7 @@ const SeminarPage = ({ data }) => {
                         <section key={index} className="seminar-section">
                             {section.image && (
                                 <div className="seminar-section-image">
-                                    <ImageWithLoader src={section.image} alt={section.heading} fadeInDuration={0.8} />
+                                    <ImageWithLoader src={section.image} alt={section.heading} />
                                 </div>
                             )}
                             <h2 className="seminar-heading">{section.heading}</h2>

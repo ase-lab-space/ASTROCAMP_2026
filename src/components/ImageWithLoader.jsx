@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import gsap from 'gsap';
+import React from 'react';
 import { useImageLoad } from '../hooks/useImageLoad';
 import './ImageWithLoader.css';
 
@@ -8,20 +7,9 @@ const ImageWithLoader = ({
   alt,
   className = '',
   style = {},
-  fadeInDuration = 0.6,
   ...rest
 }) => {
   const { loaded, error, onLoad, onError, imgRef } = useImageLoad();
-
-  useEffect(() => {
-    if (loaded && !error && imgRef.current) {
-      gsap.fromTo(
-        imgRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: fadeInDuration, ease: 'power2.out' }
-      );
-    }
-  }, [loaded, error, fadeInDuration]);
 
   return (
     <div className="image-loader-container" style={style}>
@@ -30,10 +18,9 @@ const ImageWithLoader = ({
         ref={imgRef}
         src={src}
         alt={alt}
-        className={className}
+        className={`image-loader-img ${loaded && !error ? 'image-loader-img--loaded' : ''} ${className}`}
         onLoad={onLoad}
         onError={onError}
-        style={{ opacity: 0 }}
         {...rest}
       />
     </div>

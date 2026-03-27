@@ -43,7 +43,7 @@
   /* Inactive slides are faded */
   transform: scale(0.9);
   /* Inactive slides are smaller */
-  transition: all 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
